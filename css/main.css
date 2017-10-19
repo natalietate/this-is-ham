@@ -31,6 +31,7 @@ body {
 .songs {
   background-color: #c15e27;
 }
+
 .btn {
   background-color: #09384f;
 }
@@ -43,6 +44,7 @@ a.songs, a.btn {
 a.songs:hover {
   background-color: #09384f;
 }
+
 a.btn:hover {
   background-color: #c15e27;
 }

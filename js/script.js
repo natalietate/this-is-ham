@@ -1,8 +1,8 @@
 (function() {
 
-// class to hold audio controls
+  // class to hold audio controls
   class Controls {
-    constructor(jukebox) {
+    constructor(controls) {
       this.audio = document.querySelector('audio')
     }
 
@@ -24,12 +24,12 @@
       this.audio.play();
     }
   }
-// end of Controls class
+  // end of Controls class
 
   var controls = new Controls();
 
-// start of the actual jukebox
-// selecting play / pause / stop buttons
+  // start of the actual jukebox
+  // selecting play / pause / stop buttons
   var play = document.querySelector('#play');
   var pause = document.querySelector('#pause');
   var stop = document.querySelector('#stop');
