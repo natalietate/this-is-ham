@@ -54,6 +54,7 @@
   var song1 = document.querySelector('#one')
   var song2 = document.querySelector('#two')
   var song3 = document.querySelector('#three')
+  var currentlyPlaying = document.querySelector('.currently-playing')
 
   // audio files and track name arrays
   var catalog = ['audio/alex.m4a', 'audio/burr.m4a', 'audio/my-shot.m4a']
@@ -62,15 +63,15 @@
   // set src file, play song, display the title
   song1.addEventListener('click', function() {
     controls.switchSong(catalog[0]);
-    document.querySelector('.currently-playing').innerHTML = "Now playing: " + title[0] + " performed by the Original Hamilton Broadway Cast"
+    currentlyPlaying.innerHTML = "Now playing: " + title[0] + " performed by the Original Hamilton Broadway Cast"
   })
   song2.addEventListener('click', function() {
     controls.switchSong(catalog[1]);
-    document.querySelector('.currently-playing').innerHTML = "Now playing: " + title[1] + " performed by the Original Hamilton Broadway Cast"
+    currentlyPlaying.innerHTML = "Now playing: " + title[1] + " performed by the Original Hamilton Broadway Cast"
   })
   song3.addEventListener('click', function() {
     controls.switchSong(catalog[2]);
-    document.querySelector('.currently-playing').innerHTML = "Now playing: " + title[2] + " performed by the Original Hamilton Broadway Cast"
+    currentlyPlaying.innerHTML = "Now playing: " + title[2] + " performed by the Original Hamilton Broadway Cast"
   })
 
 // if i < catalog.length, i++ otherwise i = 0
@@ -78,12 +79,12 @@ i = 0
   next.addEventListener('click', function() {
     i++
     controls.switchSong(catalog[i]);
-    document.querySelector('.currently-playing').innerHTML = "Now playing: " + title[i] + " performed by the Original Hamilton Broadway Cast"
+    currentlyPlaying.innerHTML = "Now playing: " + title[i] + " performed by the Original Hamilton Broadway Cast"
   })
 
 back.addEventListener('click', function() {
   i--
   controls.switchSong(catalog[i]);
-  document.querySelector('.currently-playing').innerHTML = "Now playing: " + title[i] + " performed by the Original Hamilton Broadway Cast"
+  currentlyPlaying.innerHTML = "Now playing: " + title[i] + " performed by the Original Hamilton Broadway Cast"
 })
 })();
