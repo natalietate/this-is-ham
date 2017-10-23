@@ -35,6 +35,7 @@
   var pause = document.querySelector('#pause');
   var stop = document.querySelector('#stop');
   var next = document.querySelector('#next');
+  var back = document.querySelector('#back');
 
   // play / pause / stop using Jukebox
   play.addEventListener('click', function() {
@@ -71,6 +72,8 @@
     controls.switchSong(catalog[2]);
     document.querySelector('.currently-playing').innerHTML = "Now playing: " + title[2] + " performed by the Original Hamilton Broadway Cast"
   })
+
+// if i < catalog.length, i++ otherwise i = 0
 i = 0
   next.addEventListener('click', function() {
     i++
@@ -78,4 +81,9 @@ i = 0
     document.querySelector('.currently-playing').innerHTML = "Now playing: " + title[i] + " performed by the Original Hamilton Broadway Cast"
   })
 
+back.addEventListener('click', function() {
+  i--
+  controls.switchSong(catalog[i]);
+  document.querySelector('.currently-playing').innerHTML = "Now playing: " + title[i] + " performed by the Original Hamilton Broadway Cast"
+})
 })();
